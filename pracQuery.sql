@@ -131,5 +131,22 @@ select * FROM SubjectOffering
 select * FROM Enrolment
 select * FROM Teacher
 
+--task 4
+--query one
+
+
+--query 2
+Select SubjectOffering.[Year], SubjectOffering.Semester,  count(*) "Enrolments"
+from SubjectOffering
+Group by SubjectOffering.[Year], SubjectOffering.Semester
+
+--query 3
+select *
+from SubjectOffering
+where Fee >(select AVG(Fee) from SubjectOffering);
+
+
+
+
 GO
 
